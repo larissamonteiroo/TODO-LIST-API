@@ -40,5 +40,5 @@ public class TaskDto {
 	public static Page<TaskDto> converter(Page<Task> tasks){
 		return tasks.map(TaskDto::new);
 	}
-	
+
 }

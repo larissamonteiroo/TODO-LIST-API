@@ -6,14 +6,21 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 @Entity
+@AllArgsConstructor
+@Builder
 public class Task {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+	@NotNull
 	private String title;
+	@NotNull
 	private String description;
 	@Enumerated(EnumType.STRING)
 	private TaskStatus status;
@@ -21,13 +28,13 @@ public class Task {
 	
 	public Task() {
 	}
-	
+
+
 	public Task(String title, String description, TaskStatus status) {
 		this.title = title;
 		this.description = description;
 		this.status = status;
 	}
-
 
 
 	public Long getId() {
@@ -66,9 +73,6 @@ public class Task {
 	public String toString() {
 		return "Task [id=" + id + ", description=" + description + ", status=" + status + "]";
 	}
-
-	
-	
 
 
 }

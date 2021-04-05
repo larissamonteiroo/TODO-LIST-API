@@ -34,8 +34,7 @@ public class TaskController {
 
 	@GetMapping
 	public Page<TaskDto> list(@RequestParam(required = false) String nameTask,
-			@PageableDefault(page = 0, size = 10) Pageable pagination) {
-		
+							  @PageableDefault(page = 0, size = 10) Pageable pagination) {
 
 		if (nameTask == null) {
 			Page<Task> tasks = taskRepository.findAll(pagination);

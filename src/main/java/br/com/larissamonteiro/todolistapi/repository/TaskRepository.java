@@ -10,4 +10,5 @@ public interface TaskRepository extends JpaRepository<Task, Long>{
 
 	Page<Task> findByTitle(String nameTask, Pageable pagination);
 
+
 }

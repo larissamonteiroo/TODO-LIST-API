@@ -49,8 +49,6 @@ public class TaskForm {
 	public Task update(Long id, TaskRepository taskRepository) {
 		Task task = taskRepository.getOne(id);
 		
-		task.setTitle(this.title);
-		task.setDescription(this.description);
 		task.setStatus(this.status);
 		
 		return task;
