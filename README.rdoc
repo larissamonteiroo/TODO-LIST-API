@@ -1,2 +1,5 @@
-Todo List é uma API simples que utiliza endpoits para armazenar e atualizar tarefas.
+TODO-LIST API
+
+TODO List é uma API simples que utiliza endpoits para armazenar e atualizar tarefas.
+
 O projeto foi desenvolvido em Java utilizando Spring Boot e banco de dados MySQL.
